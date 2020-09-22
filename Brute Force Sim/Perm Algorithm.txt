@@ -1,0 +1,6 @@
+
+A loop counting in a given base is the mechanism for this permutation with repetitions algorithm.  It’s easy to figure out if you think of a mile-o-meter (the small group of reels found on a speed-o-graph) that records a vehicles mileage.  As you know the reels are numbered from 0 – 9 (base 10) and when a reel rotates and reaches 0 again the next reel to the left is incremented by 1.  Each element of the count array (m_bCountArr) is a virtual reel but numbered in the base (integer representation) according to the chosen character set.  So, if the chosen character set was “Lower Case” the base would be 26 and each reel would be numbered 0 - 25.  Using each current reel value as an index to the character set (m_bByteSet) it is then possible to permute the password array (m_bPwrdArr) in the correct sequence.
+
+The actual code stays from this concept slightly as each element of the count array can of cause only hold one value, it is merely incremented or reset according to the last value.  Also the reel that stores the units (the reel on the right) is not used.
+
+When I first tested this algorithm I must admit I didn’t expect it to be so fast, having said that don’t be disappointed if you input a long password with all the characters selected and the program just keeps churning away.  Brute forcing a password could take years in some cases.
